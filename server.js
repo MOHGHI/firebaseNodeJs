@@ -424,15 +424,15 @@ app.get('/order/:id', function (req, res) {
 
 
 
-
+const port = process.env.PORT || 3000;
 
 
 
 //start server on port: 8080
-var server = app.listen(3000, function () {
+var server = app.listen(port, function () {
 
   //var host = server.address().address;
-  var port = server.address().port;
+  var port2 = server.address().port;
 
-  console.log("server listening at http://%s", port);
+  console.log("server listening at http://%s", port2);
 });
