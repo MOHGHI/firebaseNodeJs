@@ -2,15 +2,7 @@ var express = require('express'); //import express
 var app = express();
 var firebase = require('firebase');
 var bodyParser = require('body-parser');
-var config = {
-  apiKey: "AIzaSyDv2kxOjJ7SCWa9P8ITE2o0LyKq1Xk6Q18",
-  authDomain: "ecommerce-fae97.firebaseapp.com",
-  databaseURL: "https://ecommerce-fae97.firebaseio.com",
-  projectId: "ecommerce-fae97",
-  storageBucket: "ecommerce-fae97.appspot.com",
-  messagingSenderId: "678299482970",
-  appId: "1:678299482970:web:f365dcb60cc9fb77"
-};
+require(config);
 
 firebase.initializeApp(config);
 app.use(bodyParser.json()); //need to parse HTTP request body
