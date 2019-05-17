@@ -2,7 +2,17 @@ var express = require('express'); //import express
 var app = express();
 var firebase = require('firebase');
 var bodyParser = require('body-parser');
-require(config);
+require("./config");
+
+var config={
+  apiKey: process.env.apiKey,
+  authDomain: process.env.authDomain,
+  databaseURL: process.env.databaseURL,
+  projectId: process.env.projectId,
+  storageBucket: process.env.storageBucket,
+  messagingSenderId: process.env.messagingSenderId,
+  appId: process.env.appId
+}
 
 firebase.initializeApp(config);
 app.use(bodyParser.json()); //need to parse HTTP request body
